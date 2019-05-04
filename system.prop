@@ -1,7 +1,9 @@
 #
-# system.prop for ttab
+# system.prop for Nabi SE
 #
-ro.sf.lcd_density=213
+ro.sf.lcd_density=160
+ro.sf.hwrotation=270
+
 debug.hwui.render_dirty_regions=false
 ro.opengles.version=131072
 ro.audio.silent=0
@@ -21,7 +23,7 @@ mediatek.wlan.module.postfix=_
 ro.egl.destroy_after_detach=true
 
 # Factory Reset Protection
-ro.frp.pst=/dev/block/platform/mtk-msdc.0/mmcblk0p2
+ro.frp.pst=/dev/block/platform/mtk-msdc.0/mmcblk0p6
 
 persist.sys.strictmode.visual=0
 persist.sys.strictmode.disable=1

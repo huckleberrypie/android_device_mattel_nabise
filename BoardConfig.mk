@@ -1,8 +1,8 @@
 USE_CAMERA_STUB := true
 
-DEVICE_DIR := device/alcatel/ttab
-VENDOR_DIR := vendor/alcatel/ttab
-KERNEL_DIR := kernel/alcatel/ttab
+DEVICE_DIR := device/mattel/nabise
+VENDOR_DIR := vendor/mattel/nabise
+KERNEL_DIR := kernel/mattel/nabise
 
 # Additional includes
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_DIR)/include
@@ -26,10 +26,10 @@ ARCH_ARM_HAVE_NEON := true
 
 TARGET_NO_BOOTLOADER := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_BOOTLOADER_BOARD_NAME := ttab
-TARGET_OTA_ASSERT_DEVICE := ttab
+TARGET_BOOTLOADER_BOARD_NAME := nabise
+TARGET_OTA_ASSERT_DEVICE := nabise
 
-TARGET_INIT_VENDOR_LIB := libinit_ttab
+TARGET_INIT_VENDOR_LIB := libinit_nabise
 
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -50,14 +50,18 @@ BACKLIGHT_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 
 # Kernel
-TARGET_KERNEL_CONFIG := ttab_defconfig
-TARGET_KERNEL_SOURCE := kernel/alcatel/ttab
-BOARD_KERNEL_IMAGE_NAME := zImage
+# We don't have kernel sources for this because Mattel apparently doesn't have one in their archives
+# As if they've had a good track record when it comes to electronics
+#TARGET_KERNEL_CONFIG := nabise_defconfig
+#TARGET_KERNEL_SOURCE := kernel/mattel/nabise
+#BOARD_KERNEL_IMAGE_NAME := zImage
+
+TARGET_PREBUILT_KERNEL := device/mattel/nabise/kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=mt8127
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_CUSTOM_BOOTIMG_MK := device/alcatel/ttab/mkbootimg.mk
-BOARD_MKBOOTIMG_ARGS := --cmdline "$(BOARD_KERNEL_CMDLINE)" --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --second_offset 0x00f00000 --tags_offset 0x00000100 --board vC29-0
+BOARD_CUSTOM_BOOTIMG_MK := device/mattel/nabise/mkbootimg.mk
+BOARD_MKBOOTIMG_ARGS := --cmdline "$(BOARD_KERNEL_CMDLINE)" --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x06900000 --board vC29-0
 
 # MTK
 BOARD_HAS_MTK_HARDWARE := true
