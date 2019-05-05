@@ -40,6 +40,10 @@ on post-fs-data
 #    chmod 0660 /dev/stpbt
 #    chown bluetooth radio /dev/stpbt
 
+#Camera
+    chmod 0660 /dev/MAINAF
+    chown system camera /dev/MAINAF
+
 # GPS
 #    chown gps gps /dev/stpgps
     chown gps gps /sys/class/gpsdrv/gps/pwrctl
@@ -57,7 +61,7 @@ on post-fs-data
 
 # FM Radio device node
     chmod 0660 /dev/fm
-    chown system media /dev/fm
+    chown media media /dev/fm
 
 #Disable for one Single loader
 # Load WiFi Driver
@@ -100,15 +104,17 @@ service conn_launcher /system/bin/6620_launcher -p /system/etc/firmware/
     user system
     group system
     class core
+
+on property:service.wcn.coredump.mode=2
+start stp_dump
+
+service stp_dump /system/bin/stp_dump3
+    user root
+    group root
+    class core
+    disabled
+    oneshot
+
 #
 # Connectivity related services (End)
 #
-#[FEATURE]-Add-BEGIN by SCDTABLET.(meiqin),03/27/2015,928381,show version 
-service getver /system/bin/logwrapper   /system/bin/getver
-    class late_start
-    user root
-    group root
-    oneshot
-on property:sys.tct.curef=*
-   setprop ro.tct.curef ${sys.tct.curef}
-#[FEATURE]-Add-END  by SCDTABLET.(meiqin)

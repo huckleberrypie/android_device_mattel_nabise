@@ -21,6 +21,15 @@ persist.radio.combo.chipid=-1
 mediatek.wlan.chip=
 mediatek.wlan.module.postfix=_
 ro.egl.destroy_after_detach=true
+ro.com.google.clientidbase=android-mattel
+ro.com.google.clientidbase.ms=android-mattel
+ro.com.google.clientidbase.am=android-mattel
+ro.com.google.clientidbase.gmm=android-mattel
+ro.com.google.clientidbase.yt=android-mattel
+ro.config.ringtone=Ring_Synth_04.ogg
+ro.config.notification_sound=pixiedust.ogg
+ro.carrier=unknown
+ro.config.alarm_alert=Alarm_Classic.ogg
 
 # Factory Reset Protection
 ro.frp.pst=/dev/block/platform/mtk-msdc.0/mmcblk0p6
@@ -39,3 +48,4 @@ dalvik.vm.heapsize=256m
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=512k
 dalvik.vm.heapmaxfree=2m
+dalvik.vm.stack-trace-file=/data/anr/traces.txt

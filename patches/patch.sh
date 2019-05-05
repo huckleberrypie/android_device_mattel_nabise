@@ -1,5 +1,5 @@
 ROOT="${PWD}"
-DEVICE_DIR="device/alcatel/ttab"
+DEVICE_DIR="device/mattel/nabise"
 REPOSITORIES=(
     'frameworks/av'
 )

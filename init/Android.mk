@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := system/core/init
-LOCAL_SRC_FILES := init_ttab.cpp
-LOCAL_MODULE := libinit_ttab
+LOCAL_SRC_FILES := init_nabise.cpp
+LOCAL_MODULE := libinit_nabise
 
 include $(BUILD_STATIC_LIBRARY)

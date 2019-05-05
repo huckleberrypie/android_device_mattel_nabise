@@ -1,4 +1,4 @@
-LOCAL_PATH  := device/alcatel/ttab
+LOCAL_PATH  := device/mattel/nabise
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -12,8 +12,8 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 PRODUCT_AAPT_PREBUILT_DPI := hdpi mdpi
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 800
+TARGET_SCREEN_HEIGHT := 1024
+TARGET_SCREEN_WIDTH := 600
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 
@@ -149,4 +149,4 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/alcatel/ttab/ttab-vendor.mk)
+$(call inherit-product-if-exists, vendor/mattel/nabise/nabise-vendor.mk)

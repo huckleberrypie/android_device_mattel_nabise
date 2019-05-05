@@ -16,8 +16,8 @@
 
 set -e
 
-VENDOR=alcatel
-DEVICE_COMMON=ttab
+VENDOR=mattel
+DEVICE_COMMON=nabise
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

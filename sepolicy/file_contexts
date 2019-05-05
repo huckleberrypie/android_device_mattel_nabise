@@ -123,7 +123,7 @@
 /dev/block/mmcblk1                                                     u:object_r:mmc_device:s0
 /dev/block/zram0                                                       u:object_r:swap_block_device:s0
 
-# Block devices ttab
+# Block devices nabise
 /dev/usrdata                                                    u:object_r:userdata_block_device:s0
 /dev/recovery                                                   u:object_r:recovery_block_device:s0
 /dev/pro_info                                                   u:object_r:proinfo_device:s0

@@ -1,6 +1,6 @@
 [
     {
-        "repository": "mt8127/android_kernel_alcatel_ttab",
-        "target_path": "kernel/alcatel/ttab"
+        "repository": "mt8127/android_kernel_mattel_nabise",
+        "target_path": "kernel/mattel/nabise"
     }
 ]
