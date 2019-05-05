@@ -9,8 +9,8 @@ $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := NBTY07SMKG
-PRODUCT_NAME := TOY7
+PRODUCT_DEVICE := nabise
+PRODUCT_NAME := lineage_nabise
 PRODUCT_BRAND := nabi
 PRODUCT_MODEL := NBTY07SMKG
 PRODUCT_MANUFACTURER := Mattel

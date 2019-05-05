@@ -95,6 +95,7 @@ TARGET_DISPLAY_USE_RETIRE_FENCE := true
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 1024*1024
 BOARD_EGL_NEEDS_HANDLE_VALUE := true
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
@@ -136,3 +137,6 @@ LINKER_FORCED_SHIM_LIBS := /system/lib/egl/libEGL_mali.so|libxlog.so:/system/lib
 # SELinux
 BOARD_SECCOMP_POLICY := $(DEVICE_DIR)/seccomp
 BOARD_SEPOLICY_DIRS += $(DEVICE_DIR)/sepolicy
+
+# Hack for building without kernel sources
+$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
