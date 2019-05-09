@@ -48,12 +48,13 @@ void property_override(char const prop[], char const value[])
 
 void vendor_load_properties()
 {
-	property_override("ro.build.fingerprint", "T-Mobile/Telekom_Puls/T-Tab:5.0.1/LRX21M/vC29-0:user/release-keys");
-	property_override("ro.build.description", "Telekom_Puls-user 5.0.1 LRX21M vC29-0 release-keys");
-	property_override("ro.product.model", "Telekom Puls");
-	property_override("ro.product.device", "T-Tab");
-	property_override("ro.product.brand", "T-Mobile");
-	property_override("ro.product.manufacturer", "TCT Mobile Europe SAS");
+	property_override("ro.build.fingerprint", "nabi/TOY7/NBTY07SMKG:6.0/MRA58K/3.0.10:user/release-keys");
+	property_override("ro.build.description", "full_bd7-user 6.0 MRA58K 3.0.10 release-keys");
+	property_override("ro.product.model", "NBTY07SMKG");
+	property_override("ro.product.device", "NBTY07SMKG");
+	property_override("ro.product.brand", "nabi");
+	property_override("ro.product.manufacturer", "Mattel");
+	property_override("ro.product.name", "TOY7");
 
-    ERROR("setting build properties for T-Tab\n");
+    ERROR("setting build properties for Nabi SE\n");
 }
