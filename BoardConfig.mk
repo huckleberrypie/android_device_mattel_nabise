@@ -27,7 +27,7 @@ ARCH_ARM_HAVE_NEON := true
 TARGET_NO_BOOTLOADER := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_BOOTLOADER_BOARD_NAME := nabise
-TARGET_OTA_ASSERT_DEVICE := nabise,NabiSE,lineage_nabise,omni_nabise,omni_NabiSE,NBTY07SMKG,TOY7,TOY7-AG,TOY7-BB,TOY7-HW
+#TARGET_OTA_ASSERT_DEVICE := nabise,NabiSE,lineage_nabise,omni_nabise,omni_NabiSE,NBTY07SMKG,TOY7,TOY7-AG,TOY7-BB,TOY7-HW
 
 TARGET_INIT_VENDOR_LIB := libinit_nabise
 
@@ -57,11 +57,11 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto
 #BOARD_KERNEL_IMAGE_NAME := zImage
 
 TARGET_PREBUILT_KERNEL := device/mattel/nabise/kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=mt8127
+#BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_CUSTOM_BOOTIMG_MK := device/mattel/nabise/mkbootimg.mk
-BOARD_MKBOOTIMG_ARGS := --cmdline "$(BOARD_KERNEL_CMDLINE)" --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x06900000 --board vC29-0
+BOARD_MKBOOTIMG_ARGS := --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x06900000 --board 3.0.10
 
 # MTK
 BOARD_HAS_MTK_HARDWARE := true
