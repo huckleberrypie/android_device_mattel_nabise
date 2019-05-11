@@ -57,11 +57,11 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto
 #BOARD_KERNEL_IMAGE_NAME := zImage
 
 TARGET_PREBUILT_KERNEL := device/mattel/nabise/kernel
-#BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := enforcing=0 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_CUSTOM_BOOTIMG_MK := device/mattel/nabise/mkbootimg.mk
-BOARD_MKBOOTIMG_ARGS := --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x06900000 --board 3.0.10
+BOARD_MKBOOTIMG_ARGS := --cmdline "$(BOARD_KERNEL_CMDLINE)" --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x06900000 --board 3.0.10 
 
 # MTK
 BOARD_HAS_MTK_HARDWARE := true
@@ -95,7 +95,7 @@ TARGET_DISPLAY_USE_RETIRE_FENCE := true
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 1024*1024
 BOARD_EGL_NEEDS_HANDLE_VALUE := true
-TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+#TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
